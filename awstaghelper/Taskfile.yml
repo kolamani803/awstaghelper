@@ -1,0 +1,17 @@
+# https://taskfile.dev
+
+version: "3"
+
+tasks:
+  install:
+    desc: install binary on $GOPATH/bin
+    cmds:
+      - cmd: go install
+  test:
+    desc: run tests
+    cmds:
+      - cmd: go test ./...
+  lint:
+    desc: run golangci-lint
+    cmds:
+      - cmd: golangci-lint run
